@@ -19,6 +19,8 @@ configure<PublishingExtension> {
 
         from(components["kotlin"])
 
+        artifact(tasks.getByName<Zip>("jsLegacySourcesJar"))
+
         pom {
             name.set(project.name)
             description.set(project.description)
